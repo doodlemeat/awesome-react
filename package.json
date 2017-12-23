@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "express": "^4.16.2",
+    "express-promise-router": "^2.0.0",
+    "pg": "^7.4.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.0.17",
@@ -11,10 +13,14 @@
   },
   "scripts": {
     "start": "node server",
-    "dev": "react-scripts start",
+    "start-debug": "node --inspect server",
+    "dev": "react-scripts --inspect start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "heroku-postbuild": "react-scripts build"
+  },
+  "devDependencies": {
+    "webpack-dev-middleware": "^2.0.3"
   }
 }
